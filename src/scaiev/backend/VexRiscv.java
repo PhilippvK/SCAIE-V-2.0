@@ -274,8 +274,9 @@ public class VexRiscv extends CoreBackend {
 
     // Read Reg file?
     String add_comma = "";
-    if (isax.HasNode(BNode.WrRD))
-      add_comma = tab.repeat(tabs) + ",";
+    // if (isax.HasNode(BNode.WrRD))
+    if (reqWrRD)
+      add_comma = ",";
     if (isax.HasNode(BNode.RdRS1) || defaultMemAddr)
       setupText += tab.repeat(tabs) + "RS1_USE                  -> True,\n";
     else
