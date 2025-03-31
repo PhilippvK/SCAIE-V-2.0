@@ -8,6 +8,7 @@ def translate_pin_name(name):
     # Identity, since no conversion step is required.
     return name
 
-template_filename = "CVA5_top_template_bram.v"
+# template_filename = "CVA5_top_template_bram.v"
+template_filename = "CVA5_top_template_custom.v"
 write_top(template_filename, "CVA5_top.v", translate_pin_name)
 
